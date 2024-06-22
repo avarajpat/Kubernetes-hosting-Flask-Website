@@ -3,7 +3,7 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: config-file
+  name: flask_app
   region: us-east-1
 
 nodeGroups:
