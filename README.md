@@ -32,4 +32,4 @@ When building docker images locally on macos it uses the executable for ARM 64 w
 ** Resolution was to force docker to use the AMD 64 in Docker File  FROM --platform=linux/amd64  python:3.8-slim-buster  on Docker while using Apple M1 Max **
 
 
-Currently the Website runs with 4 replica pods and 2 worker nodes for fault tolerance and high avalibility.
+Currently the Website runs with 2 replica pods and 2 worker nodes for fault tolerance and high avalibility.
