@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: lb-service
+  labels:
+    app: lb-service
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: flask-web-port
+  selector:
+    app: frontend
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    environment: dev
+  name: flask-app-1
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      environment: dev
+  template:
+    metadata:
+      labels:
+        environment: dev
+        app: frontend
+    spec:
+      containers:
+      # - image: nginx:1.16
+      #   name: nginx      
+      - name: private-reg-container
+        image: avi188/dockeravi:flask
+        ports:
+          - containerPort: 5000
+            name: flask-web-port
+      imagePullSecrets:
+      - name: regcred  
+
+
