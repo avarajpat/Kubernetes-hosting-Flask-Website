@@ -1,6 +1,6 @@
 # This repository has scripts to create Dockerfile and creation on Flask App with EKS deployment and Load balancer
 
-A Flask App with my portfolio has been deployed to "aac7776be0bfd47caafd0e0468cf0237-1596588144.us-east-1.elb.amazonaws.com"
+A Flask App with my portfolio has been deployed to "ad8ec93102cc642718c6348ab5bfa147-206940199.us-east-1.elb.amazonaws.com/"
 
 
 Steps Taken : 
